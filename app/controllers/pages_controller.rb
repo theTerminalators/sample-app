@@ -1,10 +1,12 @@
 class PagesController < ApplicationController
   def hello
-    render 'first_view.html'
+    @title = "Info"
+    render 'first_view.html.erb'
   end
 
   def the_news
+    @title = "News"
     @current_time = Time.now
-    render 'information.html'
+    render 'information.html.erb'
   end
 end
